@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import MovieList from './components/MovieList';
@@ -12,7 +12,7 @@ const App = () => {
   const [searchValue, setSearchValue] = useState('');
   const [selectedMovie, setSelectedMovie] = useState(null);
 
-  const getMovieRequest = async () => {
+  const getMovieRequest = useCallback(async () => {
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=bd382e07`
 
     const response = await fetch(url);
@@ -22,7 +22,7 @@ const App = () => {
     if (responseJson.Search) {
       setMovies(responseJson.Search)
     }
-  };
+  }, [searchValue]);
 
   // Fetching details of selected movie
   const getMovieDetails = async (movieTitle) => {
@@ -39,7 +39,7 @@ const App = () => {
 
   useEffect(() => {
     getMovieRequest(searchValue);
-  }, [searchValue]);
+  }, [searchValue, getMovieRequest]);
 
   return (
     <div className='main-container'>
