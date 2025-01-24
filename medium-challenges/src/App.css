@@ -1,9 +1,8 @@
 /* Medium */
 body {
-  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  background: lightgray;
   height: 100vh;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
+  color: #141414;
 }
 
 .main-container {
@@ -88,5 +87,5 @@ button {
 }
 
 button:hover {
-  background: rgb(119, 141, 247);
+  background: red;
 }
