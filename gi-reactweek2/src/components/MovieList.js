@@ -8,7 +8,7 @@ const MovieList = (props) => {
                     className='movie-container'
                     key={index}
                     onClick={() => props.onMovieClick(movie.Title)}>
-                    <img src={movie.Poster} alt={movie.Title}></img>
+                    <img className='movie-img' src={movie.Poster} alt={movie.Title}></img>
                 </div>
             ))}
         </>

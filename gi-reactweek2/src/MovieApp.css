@@ -1,15 +1,9 @@
 /* Medium */
-body {
-  background: lightgray;
-  height: 100vh;
-  color: #141414;
-}
-
 .main-container {
-  padding: 20px;
+  padding: 1.25rem;
 }
 
-.main-container .row {
+.main-container .movie-row {
   display: flex;
   overflow-x: auto;
   flex-wrap: nowrap;
@@ -19,9 +13,8 @@ body {
   justify-content: space-between;
 }
 .main-container .web-name {
-  padding-right: 15px;
-  padding-left: 15px;
-  flex: 1 0 auto; /* Ensures columns are flexible but aligned */
+  padding: 0 .938rem;
+  flex: 1 0 auto;
 }
 
 .main-container .searchBar {
@@ -33,8 +26,8 @@ body {
   position: relative;
   transition: transform 0.2s;
   width: 100%;
-  max-width: 200px; /* Adjust the width of the movie posters */
-  margin: 10px;
+  max-width: 12.5rem;
+  margin: .625rem;
 }
 
 .movie-container:hover {
@@ -42,7 +35,7 @@ body {
   transform: scale(1.1);
 }
 
-.movie-container img {
+.movie-container .movie-img {
   width: 100%;
   height: auto;
   border-radius: 5px;
@@ -53,18 +46,18 @@ body {
   flex-direction: column;
   align-items: center;
   background: rgba(0,0,0,.05);
-  padding: 20px;
-  border-radius: 8px;
-  margin: 20px auto;
+  padding: 1.25rem;
+  border-radius: .5rem;
+  margin: 1.25rem auto;
 }
 
-.details-container h2 {
-  font-size: 2em;
+.details-container .details-title {
+  font-size: 2rem;
   margin: 0 0 1.25rem;
 }
 
-.details-container img {
-  width: 200px;
+.details-container .details-img {
+  width: 12.5rem;
   height: auto;
   border-radius: 5px;
 }
@@ -76,16 +69,16 @@ body {
   margin: 1rem 0;
 }
 
-button {
+.movie-btn {
   background: rgb(63,94,251);
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: .625rem 1.25rem;
+  border-radius: .313rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+.movie-btn:hover {
   background: red;
 }

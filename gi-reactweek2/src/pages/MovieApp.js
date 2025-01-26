@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import MovieList from './components/MovieList';
-import MovieListHeading from './components/MovieListHeading';
-import SearchBox from './components/SearchBox';
-import MovieDetails from './components/MovieDetails';
+import '../MovieApp.css';
+import MovieList from '../components/MovieList';
+import MovieListHeading from '../components/MovieListHeading';
+import SearchBox from '../components/SearchBox';
+import MovieDetails from '../components/MovieDetails';
 
 // Medium
 const MovieApp = () => {
@@ -48,13 +48,13 @@ const MovieApp = () => {
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
       {!selectedMovie ? (
-        <div className='row'>
+        <div className='movie-row'>
           <MovieList movies={movies} onMovieClick={getMovieDetails} />
         </div>
       ) : (
         <div className='movieDetails'>
           <MovieDetails movie={selectedMovie} />
-          <button onClick={() => setSelectedMovie(null)}>
+          <button className='movie-btn' onClick={() => setSelectedMovie(null)}>
             Back to Search
           </button>
         </div>
