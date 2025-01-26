@@ -5,7 +5,7 @@ import ToDo from './components/ToDo';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-function App() {
+function ToDoApp() {
 
   // Tasks (ToDo List) State
   const [toDo, setToDo] = useState([]);
@@ -103,4 +103,4 @@ function App() {
   );
 }
 
-export default App;
+export default ToDoApp;

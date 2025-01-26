@@ -7,7 +7,7 @@ import SearchBox from './components/SearchBox';
 import MovieDetails from './components/MovieDetails';
 
 // Medium
-const App = () => {
+const MovieApp = () => {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState('');
   const [selectedMovie, setSelectedMovie] = useState(null);
@@ -63,4 +63,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default MovieApp;
